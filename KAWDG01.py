@@ -42,3 +42,22 @@ plt.title('Field Measurements')
 plt.gcf().autofmt_xdate()
 # function to show the plot
 plt.show()
+
+# USGS Daily Data
+df = pd.read_csv('USGS_Daily_Data_m.CSV',names=headers)
+# x axis values
+x = df['Date']
+# y axis values
+y = df['Water Levels (m)']
+# plot
+plt.plot(x, y)
+# naming the x axis 
+plt.xlabel('Date') 
+# naming the y axis 
+plt.ylabel('Water Levels (m)')
+# giving a title to my graph 
+plt.title('USGS Daily Data')
+# beautify the x-labels
+plt.gcf().autofmt_xdate()
+# function to show the plot
+plt.show()
